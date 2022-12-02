@@ -3,6 +3,7 @@ default: &default
   encoding: utf8mb4
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
+  poot: 3306
   password: password # デフォルトだと空欄になっているので変更
   host: db # デフォルトだとlocalhostになっているので変更
 
