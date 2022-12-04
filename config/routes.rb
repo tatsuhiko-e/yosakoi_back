@@ -7,6 +7,10 @@ Rails.application.routes.draw do
       namespace :admin do
         resources :sessions, only: %i[index]
       end
+      resources :musics, only: [:index, :create, :show, :update] do
+        get "search" => "musics#search", on: :collection
+      end
+
     end
   end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
