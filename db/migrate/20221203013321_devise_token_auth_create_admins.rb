@@ -28,10 +28,10 @@ class DeviseTokenAuthCreateAdmins < ActiveRecord::Migration[7.0]
       # t.datetime :locked_at
 
       ## User Info
-      t.string :team_name
+      t.string :team_name, null: false
       t.text :team_theme
       t.integer :activity_area, :default => 0
-      t.string :email
+      t.string :email, null: false
       t.boolean :public_team, :default => false
 
       ## Tokens
