@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::API
+  include DeviseHackFakeSession
   include ActionController::Cookies
   include DeviseTokenAuth::Concerns::SetUserByToken
   before_action do
