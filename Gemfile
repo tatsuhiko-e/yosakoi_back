@@ -37,6 +37,8 @@ gem "bootsnap", require: false
 gem "rack-cors"
 
 gem 'pry-rails'
+gem 'devise'
+gem 'devise_token_auth'
 
 group :production do
   gem 'unicorn'
