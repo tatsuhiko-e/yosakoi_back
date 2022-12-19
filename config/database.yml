@@ -4,20 +4,23 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
   poot: 3306
-  password: password # デフォルトだと空欄になっているので変更
-  host: db # デフォルトだとlocalhostになっているので変更
+  host: db
 
 development:
   <<: *default
   database: yosa_management_development
+  password: password
+  host: db
 
 test:
   <<: *default
   database: myapp_test
+  password: password
+  host: db
 
 production:
   <<: *default
   database: yosa_management_production
   username: root
   password: <%= ENV["DATABASE_PASSWORD"] %>
-  socket: /var/lib/mysql/mysql.sock
+  host: <%= ENV["HOST_NAME"] %>
