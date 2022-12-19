@@ -9,7 +9,7 @@ default: &default
 
 development:
   <<: *default
-  database: myapp_development
+  database: yosa_management_development
 
 test:
   <<: *default
@@ -17,7 +17,7 @@ test:
 
 production:
   <<: *default
-  database: <%= ENV["DATABASE_NAME"] %>
-  username: <%= ENV["DATABASE_USERNAME"] %>
+  database: yosa_management_production
+  username: root
   password: <%= ENV["DATABASE_PASSWORD"] %>
-  host: <%= ENV["DATABASE_HOST"] %>
+  socket: /var/lib/mysql/mysql.sock
