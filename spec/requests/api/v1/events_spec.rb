@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe 'Api::Admin::Registrations', type: :request do
+RSpec.describe 'Api::V1::Events', type: :request do
   describe 'GET /index' do
     pending "add some examples (or delete) #{__FILE__}"
   end

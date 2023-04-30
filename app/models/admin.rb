@@ -12,5 +12,5 @@ class Admin < ActiveRecord::Base
   validates :team_name, presence: { message: 'が入力されていません' }
   validates :email, {  presence: true,
                        format: { with: VALID_EMAIL_REGEX },
-                       uniqueness: { case_sensitive: false }}
+                       uniqueness: { case_sensitive: false } }
 end
