@@ -35,6 +35,7 @@ class DeviseTokenAuthCreateAdmins < ActiveRecord::Migration[7.0]
       t.integer :activity_area, default: 0
       t.string :email, null: false
       t.boolean :public_team, default: false
+      t.integer :team_code
 
       ## Tokens
       t.text :tokens
